@@ -1,0 +1,199 @@
+import { HeroHeader } from './HeroHeader';
+import { SiteFooter } from './SiteFooter';
+
+const plans = [
+    {
+        name: 'Starter',
+        subtitle: 'Ideal for early-stage small teams',
+        price: '$5',
+        note: '/ month',
+        badge: '30 Days Free Trial',
+        badgeTone: 'bg-[#111111] text-white',
+        accent: '-20%',
+        features: [
+            'Mobile friendly',
+            'Support for global users',
+            'User-friendly UI',
+            'Image support',
+            'Basic reports',
+            'Team onboarding presets',
+        ],
+    },
+    {
+        name: 'Pro Version',
+        subtitle: 'Best choice for growing teams',
+        price: '$12',
+        note: '/ month',
+        badge: 'Most Popular',
+        badgeTone: 'bg-[#dcefff] text-[#111111]',
+        featured: true,
+        features: [
+            'Mobile friendly',
+            'Multi-language support',
+            'Support for global users',
+            'User-friendly UI',
+            'Image support',
+            'Multi-source responses',
+            'Team-specific analytics',
+        ],
+    },
+    {
+        name: 'Premium',
+        subtitle: 'For large orgs with advanced needs',
+        price: '$49',
+        note: '/ month',
+        features: [
+            'Mobile friendly',
+            'Multi-language support',
+            'Support for global users',
+            'User-friendly UI',
+            'Image support',
+            'Multi-source responses',
+            'Basewell AI sync',
+            'Guided learning paths',
+        ],
+    },
+];
+
+const pricingHighlights = [
+    {
+        title: 'Annual Savings',
+        value: 'Save up to 20%',
+        description: 'Switch to yearly billing and cut recurring cost without losing features.',
+    },
+    {
+        title: 'Scale Flexibly',
+        value: 'Seats adjust instantly',
+        description: 'Upgrade or expand across teams without contract friction or hidden setup fees.',
+    },
+    {
+        title: 'Support Included',
+        value: 'Human help on every tier',
+        description: 'Every plan includes onboarding guidance and responsive product support.',
+    },
+];
+
+export const PricingPage = () => {
+    return (
+        <main className="min-h-screen overflow-hidden bg-[#f7f8fc] text-[#15161c]">
+            <section className="relative overflow-hidden px-4 pb-20 pt-7 sm:px-5 lg:px-4">
+                <div className="pointer-events-none absolute inset-0">
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,#e2f2ff_0%,#f0f5fd_28%,#f7f7fc_72%,#f8f8fc_100%)]" />
+                    <div className="absolute left-[-12%] top-[1%] h-[34rem] w-[34rem] rounded-full bg-[#c8e7ff]/84 blur-[100px]" />
+                    <div className="absolute right-[-6%] top-[-3%] h-[30rem] w-[30rem] rounded-full bg-[#c7ecff]/72 blur-[102px]" />
+                    <div className="absolute left-[14%] top-[54%] h-[28rem] w-[22rem] rounded-full bg-[#ffc6b8]/42 blur-[108px]" />
+                    <div className="absolute right-[18%] top-[48%] h-[26rem] w-[28rem] rounded-full bg-[#dcebff]/34 blur-[108px]" />
+                    <div className="absolute inset-x-0 top-[10%] h-[24rem] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.82)_0%,rgba(255,255,255,0.16)_52%,transparent_78%)]" />
+                </div>
+
+                <div className="relative mx-auto max-w-[1540px]">
+                    <HeroHeader activePath="/pricing" />
+
+                    <section className="px-3 pb-8 pt-20 text-center sm:px-4 lg:px-6 lg:pt-24">
+                        <div className="inline-flex items-center gap-2 rounded-full bg-[#fff3f5]/92 px-4 py-[7px] text-[0.92rem] font-bold tracking-[0.01em] text-[#6d88dc] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.78)]">
+                            <span className="text-[0.8rem] text-[#ff9f86]">✦</span>
+                            <span>pricing</span>
+                        </div>
+
+                        <h1 className="mx-auto mt-7 max-w-[980px] text-[3rem] font-extrabold leading-[0.98] tracking-[-0.085em] text-[#111218] sm:text-[4.2rem] lg:text-[5rem]">
+                            One Platform For Team Learning And Growth
+                        </h1>
+
+                        <p className="mx-auto mt-7 max-w-[820px] text-[1.08rem] leading-[1.65] text-[#9197a8] lg:text-[1.16rem]">
+                            From zero to IPO, Skillflow helps the world&apos;s most ambitious teams do
+                            their best work
+                        </p>
+                    </section>
+
+                    <section className="px-2 pb-8 sm:px-3 lg:px-4">
+                        <div className="grid gap-5 lg:grid-cols-3 lg:gap-6">
+                            {plans.map((plan) => (
+                                <article
+                                    key={plan.name}
+                                    className={`relative overflow-hidden rounded-[30px] border px-8 pb-8 pt-10 text-left shadow-[0_16px_36px_rgba(170,182,213,0.10)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_48px_rgba(170,182,213,0.18)] ${
+                                        plan.featured
+                                            ? 'border-[#d8ebff] bg-[linear-gradient(180deg,rgba(238,249,255,0.98),rgba(230,244,255,0.96))]'
+                                            : 'border-white/85 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(252,253,255,0.94))]'
+                                    }`}
+                                >
+                                    {plan.badge ? (
+                                        <div
+                                            className={`absolute left-8 top-5 rounded-full px-4 py-[8px] text-[0.82rem] font-bold ${plan.badgeTone}`}
+                                        >
+                                            {plan.badge}
+                                        </div>
+                                    ) : null}
+
+                                    <div className={`${plan.badge ? 'mt-9' : 'mt-2'}`}>
+                                        <h2 className="text-[1.2rem] font-extrabold tracking-[-0.04em] text-[#111218]">
+                                            {plan.name}
+                                        </h2>
+                                        <p className="mt-3 text-[1.02rem] leading-[1.55] text-[#8c92a3]">
+                                            {plan.subtitle}
+                                        </p>
+                                    </div>
+
+                                    <div className="mt-8 flex items-end gap-3">
+                                        <span className="text-[4rem] font-extrabold leading-none tracking-[-0.08em] text-[#111218]">
+                                            {plan.price}
+                                        </span>
+                                        <span className="pb-3 text-[1rem] text-[#7f8596]">
+                                            {plan.note}
+                                        </span>
+                                        {plan.accent ? (
+                                            <span className="mb-3 rounded-full bg-[#eaf1ff] px-3 py-1 text-[0.9rem] font-semibold text-[#4f88ff]">
+                                                {plan.accent}
+                                            </span>
+                                        ) : null}
+                                    </div>
+
+                                    <div className="mt-8 h-px bg-[#e9edf4]" />
+
+                                    <ul className="mt-8 space-y-4">
+                                        {plan.features.map((feature) => (
+                                            <li
+                                                key={feature}
+                                                className="flex items-center gap-3 text-[1rem] text-[#242730]"
+                                            >
+                                                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-[#d7dbe5] text-[0.7rem] text-[#8f95a6]">
+                                                    ○
+                                                </span>
+                                                <span>{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </article>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="px-2 pb-6 pt-10 sm:px-3 lg:px-4">
+                        <div className="grid gap-6 lg:grid-cols-3">
+                            {pricingHighlights.map((item) => (
+                                <article
+                                    key={item.title}
+                                    className="rounded-[28px] border border-white/85 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(249,251,255,0.9))] px-8 py-8 shadow-[0_16px_34px_rgba(174,186,216,0.10)]"
+                                >
+                                    <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[linear-gradient(180deg,#eef6ff_0%,#e3efff_100%)] text-[#3b80ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]">
+                                        ✦
+                                    </div>
+                                    <h2 className="text-[1.12rem] font-extrabold tracking-[-0.04em] text-[#111218]">
+                                        {item.title}
+                                    </h2>
+                                    <div className="mt-4 text-[1.6rem] font-extrabold tracking-[-0.05em] text-[#111218]">
+                                        {item.value}
+                                    </div>
+                                    <p className="mt-4 text-[1rem] leading-[1.65] text-[#8f95a6]">
+                                        {item.description}
+                                    </p>
+                                </article>
+                            ))}
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <SiteFooter />
+        </main>
+    );
+};
