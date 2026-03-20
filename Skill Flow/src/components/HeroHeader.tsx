@@ -5,10 +5,10 @@ const navItems = [
     { label: 'About', to: '/about' },
     { label: 'Pricing', to: '/pricing' },
     { label: 'Blog', to: '/blog' },
-    { label: 'Customers' },
+    { label: 'Customers', to: '/customers' },
 ];
 
-export const HeroHeader = ({ activePath = '/' }: { activePath?: '/' | '/about' | '/pricing' | '/blog' }) => {
+export const HeroHeader = ({ activePath = '/' }: { activePath?: '/' | '/about' | '/pricing' | '/blog' | '/customers' }) => {
     return (
         <header className="relative z-10 mx-auto mt-2 grid min-h-[72px] w-full max-w-[1480px] grid-cols-1 items-center gap-5 rounded-[22px] border border-white/80 bg-white/55 px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)] backdrop-blur-xl sm:px-6 lg:grid-cols-[1fr_auto_auto] lg:gap-8 lg:px-3 lg:py-0 lg:pl-3 lg:pr-4">
             <Brand />

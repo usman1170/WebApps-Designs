@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 
-export type SitePath = '/' | '/about' | '/pricing' | '/blog';
+export type SitePath = '/' | '/about' | '/pricing' | '/blog' | '/customers';
 
 type RouterContextValue = {
     pathname: SitePath;
@@ -20,6 +20,10 @@ export const normalizePath = (pathname: string): SitePath => {
 
     if (pathname.startsWith('/blog')) {
         return '/blog';
+    }
+
+    if (pathname.startsWith('/customers')) {
+        return '/customers';
     }
 
     return '/';

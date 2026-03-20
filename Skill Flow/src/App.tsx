@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { AboutPage } from './components/AboutPage';
-import { BlogPage } from './components/BlogPage';
-import { HomePage } from './components/HomePage';
-import { PricingPage } from './components/PricingPage';
+import { AboutPage } from './pages/AboutPage';
+import { BlogPage } from './pages/BlogPage';
+import { CustomersPage } from './pages/CustomersPage';
+import { HomePage } from './pages/HomePage';
+import { PricingPage } from './pages/PricingPage';
 import { SiteRouterProvider, SitePath, useSiteRouter } from './lib/site-router';
 
 const AppContent = () => {
@@ -45,6 +46,10 @@ const AppContent = () => {
 
     if (displayPath === '/blog') {
         page = <BlogPage />;
+    }
+
+    if (displayPath === '/customers') {
+        page = <CustomersPage />;
     }
 
     return (

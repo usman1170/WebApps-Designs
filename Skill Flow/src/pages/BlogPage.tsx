@@ -1,5 +1,5 @@
-import { HeroHeader } from './HeroHeader';
-import { SiteFooter } from './SiteFooter';
+import { HeroHeader } from '../components/HeroHeader';
+import { SiteFooter } from '../components/SiteFooter';
 
 const blogCards = [
     {

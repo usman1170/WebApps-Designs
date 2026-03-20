@@ -38,7 +38,11 @@ export const SiteFooter = () => {
                                         Blog
                                     </SiteLink>
                                 </li>
-                                <li>Customers</li>
+                                <li>
+                                    <SiteLink to="/customers" className="transition-colors hover:text-white">
+                                        Customers
+                                    </SiteLink>
+                                </li>
                             </ul>
                         </div>
 
