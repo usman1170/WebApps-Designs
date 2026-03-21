@@ -5,7 +5,7 @@ const socials = ['in', '◎', '𝕏'];
 
 export const SiteFooter = () => {
     return (
-        <footer className="relative z-10 bg-[#f9f8fd] px-0 pb-0 pt-8">
+        <footer className="relative z-10 bg-[#f9f8fd] dark:bg-[#0a0a0c] px-0 pb-0 pt-8 transition-colors duration-500">
             <div className="w-full overflow-hidden bg-black px-6 pb-8 pt-14 text-white sm:px-10 lg:px-0">
                 <div className="mx-auto max-w-[1320px] px-0 lg:px-12">
                     <div className="grid gap-12 lg:grid-cols-[1.45fr_0.55fr_0.55fr_0.55fr]">

@@ -7,6 +7,18 @@
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-[#111218] transition-colors duration-500 overflow-x-hidden;
+  }
+
+  .dark body {
+    @apply bg-[#0a0a0c] text-white;
+  }
+
   html,
   body,
   #root {
@@ -16,8 +28,11 @@
 
   body {
     overflow-x: hidden;
+    overscroll-behavior-y: none;
     font-family: "Plus Jakarta Sans", "Manrope", "Segoe UI", sans-serif;
     background: linear-gradient(180deg, #f6f7fd 0%, #f4f4fb 100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   a {
