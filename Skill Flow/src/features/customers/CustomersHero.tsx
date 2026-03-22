@@ -16,19 +16,19 @@ export const CustomersHero = () => {
     return (
         <section className="relative px-5 pt-20 pb-16 text-center lg:pt-28">
             <div className="mx-auto flex flex-col items-center">
-                <div className="ch-badge mb-6 flex items-center gap-2 rounded-full bg-[#ffede6] px-4 py-1.5 text-[0.95rem] font-semibold text-[#f95738]">
+                <div className="ch-badge mb-6 flex items-center gap-2 rounded-full bg-[#ffede6] dark:bg-white/5 px-4 py-1.5 text-[0.95rem] font-semibold text-[#f95738] dark:text-[#ff9f86]">
                     <span>📢</span>
                     <span>Customers</span>
                 </div>
-                <h1 className="ch-h1 max-w-[800px] text-[3.2rem] font-extrabold leading-[1.05] tracking-tight text-[#12131a] sm:text-[4rem] lg:text-[4.5rem]">
+                <h1 className="ch-h1 max-w-[800px] text-[3.2rem] font-extrabold leading-[1.05] tracking-tight text-[#12131a] dark:text-white sm:text-[4rem] lg:text-[4.5rem]">
                     Trusted by Teams Everywhere
                 </h1>
-                <p className="ch-sub mt-8 max-w-[700px] text-[1.1rem] text-[#6b7280] leading-relaxed">
+                <p className="ch-sub mt-8 max-w-[700px] text-[1.1rem] text-[#6b7280] dark:text-slate-400 leading-relaxed">
                     Skillflow empowers teams worldwide to streamline training, boost
                     engagement, and achieve results faster.
                 </p>
 
-                <div className="ch-img relative mt-16 w-full max-w-[1240px] overflow-hidden rounded-[2.5rem] bg-gray-200 shadow-2xl">
+                <div className="ch-img relative mt-16 w-full max-w-[1240px] overflow-hidden rounded-[2.5rem] bg-gray-200 dark:bg-[#111] shadow-2xl dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)]">
                     <img
                         src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=2000"
                         alt="Customers meeting"

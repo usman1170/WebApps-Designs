@@ -54,7 +54,8 @@ export const SiteRouterProvider = ({ children }: { children: ReactNode }) => {
 
         window.history.pushState({}, '', nextPath);
         setPathname(nextPath);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Use instant scroll when changing pages to prevent smooth scroll fighting with the GSAP mask transition
+        window.scrollTo(0, 0);
     };
 
     return (
