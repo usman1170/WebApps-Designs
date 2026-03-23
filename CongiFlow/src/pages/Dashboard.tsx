@@ -1,6 +1,9 @@
 import { ArrowUpRight, ArrowDownRight, MoreHorizontal, Calendar as CalendarIcon, Clock, RefreshCw, Plus } from 'lucide-react';
+import { useWorkspaceModal } from '../lib/workspace-modal';
 
 export default function Dashboard() {
+  const { openModal } = useWorkspaceModal();
+
   return (
     <div className="p-8 pb-32 max-w-[1600px] mx-auto relative z-10 transition-colors duration-300">
       <header className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -37,7 +40,11 @@ export default function Dashboard() {
             <span>Today</span>
           </button>
           
-          <button className="h-10 px-5 rounded-[20px] bg-brand text-white text-[13px] font-bold flex items-center gap-2 hover:bg-brand/90 transition-all shadow-[0_4px_12px_rgba(255,83,0,0.25)]">
+          <button
+            className="h-10 px-5 rounded-[20px] bg-brand text-white text-[13px] font-bold flex items-center gap-2 hover:bg-brand/90 transition-all shadow-[0_4px_12px_rgba(255,83,0,0.25)]"
+            onClick={() => openModal('task')}
+            type="button"
+          >
             <Plus className="w-4 h-4" />
             <span>New Task</span>
           </button>

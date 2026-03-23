@@ -9,12 +9,15 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import { useWorkspaceModal } from '../lib/workspace-modal';
 
 interface SidebarProps {
   className?: string;
 }
 
 export default function Sidebar({ className = '' }: SidebarProps) {
+  const { openModal } = useWorkspaceModal();
+
   return (
     <aside className={`bg-surface dark:bg-transparent h-full flex flex-col border-r border-[#E5E7EB] dark:border-white/5 pt-6 pb-6 overflow-y-auto transition-colors duration-300 ${className}`}>
       {/* Logo */}
@@ -221,7 +224,11 @@ export default function Sidebar({ className = '' }: SidebarProps) {
 
       {/* Upgrade Button */}
       <div className="px-6 mt-auto pt-6">
-        <button className="w-full bg-brand hover:bg-brand-dark text-white rounded-xl py-3 flex items-center justify-center gap-2 font-semibold text-sm transition-colors shadow-[0_4px_14px_rgba(255,87,34,0.39)]">
+        <button
+          className="w-full bg-brand hover:bg-brand-dark text-white rounded-xl py-3 flex items-center justify-center gap-2 font-semibold text-sm transition-colors shadow-[0_4px_14px_rgba(255,87,34,0.39)]"
+          onClick={() => openModal('upgrade')}
+          type="button"
+        >
           <span className="opacity-80">🏆</span> Upgrade to PRO
         </button>
       </div>

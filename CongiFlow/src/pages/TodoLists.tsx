@@ -13,6 +13,7 @@ import {
   Target,
   Users2
 } from 'lucide-react';
+import { useWorkspaceModal } from '../lib/workspace-modal';
 
 type TaskStatus = 'Backlog' | 'In Progress' | 'Review' | 'Done';
 type TaskPriority = 'Low' | 'Medium' | 'High';
@@ -101,6 +102,7 @@ function priorityClasses(priority: TaskPriority) {
 }
 
 export default function TodoLists() {
+  const { openModal } = useWorkspaceModal();
   const [tasks, setTasks] = useState(initialTasks);
   const [activeFilter, setActiveFilter] = useState('All');
   const [search, setSearch] = useState('');
@@ -153,7 +155,11 @@ export default function TodoLists() {
             Track work across backlog, delivery, and review with the same motion language and visual rhythm as the rest of the workspace.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <button className="inline-flex items-center gap-2 rounded-2xl bg-brand px-5 py-3 text-[13px] font-bold text-white shadow-[0_14px_34px_-18px_rgba(255,83,0,0.65)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand/90">
+            <button
+              className="inline-flex items-center gap-2 rounded-2xl bg-brand px-5 py-3 text-[13px] font-bold text-white shadow-[0_14px_34px_-18px_rgba(255,83,0,0.65)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand/90"
+              onClick={() => openModal('task')}
+              type="button"
+            >
               <Plus className="h-4 w-4" />
               New task
             </button>
