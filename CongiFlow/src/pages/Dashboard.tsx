@@ -572,7 +572,7 @@ export default function Dashboard() {
             
             <h3 className="font-bold text-[18px] text-white tracking-tight mb-2 relative z-10 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
-              Ask CongiFlow AI...
+              Ask Momentum AI...
             </h3>
             <p className="text-[11px] text-white/50 font-medium mb-6 relative z-10 max-w-[80%]">
               Generate reports, schedule meetings, or query your database using natural language.
